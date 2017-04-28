@@ -1,0 +1,23 @@
+----------------------------------------
+    Logistics for Inventory
+----------------------------------------
+
+1. Upload all csv files to this directory
+2. RUN ./getInv.SH clean
+    - to remove previous session files
+3. RUN catcsv.SH
+    - convert end line files from dos to unix format
+    - append a newline character to the EOF for each csv files
+    - read and append all csv files into one main file -- inv_MMDD.csv
+    - where MM is the 2 digit month, and DD is 2 digit day of month
+4. RUN ./getInv.SH inv_MMDD.csv
+    - this will be a dry run, no changes are made to the database
+    - a backup file is made
+    - save the error log if needed
+    - save the output.csv, this is used for RECONCILE purposes
+5. RUN ./getInv.SH --WET inv_MMDD.csv
+    - this will make changes to the database
+    - first setting all products to 0 stock
+    - then adding counted values in
+
+
