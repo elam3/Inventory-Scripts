@@ -21,3 +21,8 @@
     - then adding counted values in
 
 
+6. Generate the reconcilement report:
+    RUN python reconcile.py Inv*.csv
+	- assumes the existence of the file 'output.csv' (generated from getInv.SH)
+	- input file arguments are the uploaded CSV files from google sheets
+
